@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+<script type="text/javascript" src="C:\Users\User\Desktop\Exam2\FirstExam_2\jquery-3.6.0.slim.min.js"></script>
+<script>
+    $(document).ready(function(){
+      
+        $("#clearAll").blur(function(){
+
+            $("#table1").remove();
+        });
+
+        $(".trashIcon").click(function(){
+            debugger;
+         
+         $(this).closest('.trashIcon .text-align tr').remove("tr");
+        
+              
+        
+        
+        });
+
+        $("#result").prop(this).blur(function () {
+            debugger;
+           var no1= $("#result").val(); var no=$(".text-align itemunitprice");
+          var res= $(".text-align itemsubtotal").each(function () {
+
+          res=no1*20;
+        })
+    });
+
+    $("#ApplyCoupon").click(function () {
+        debugger;
+     var va= $("#txtdiscount").val();
+   
+    $('#ca').append('<td>'+"discont"+":"+'<td>'+va);
+
+    });
+
+    });
+</script>
+    </head>
+    <body>
+<div class="maindiv">
+    <div class="shopping-cart">
+<table class="table-responsive table">
+    <thead>
+<tr>
+    <th class="text-align">
+        Product Name
+    </th>
+    <th class="text-align">
+        Quantity
+    </th>
+    <th class="text-align">
+        Unit Price
+    </th>
+    <th class="text-align">
+        Subtotal
+    </th>
+    <th>
+        <button  id="clearAll" class="btn btndanger">Clear Cart</button>
+    </th>
+
+</tr>
+    </thead>
+    <tbody id="table1">
+        <tr>
+            <td>
+                <div class="product-item">
+                    <a class="product-thumb" href="#"><img src="000000.png" alt="Product"></a>
+                    <div class="product-info">
+                        <h4 class="product-title"><a href="#">Unionbay Park</a></h4><span>Size: 10.5</span><span>Color: Dark Blue</span>
+                    </div>
+                </div>
+            </td>
+            <td class="text-align">
+                <div class="count-input">
+                    <input type="text" class="FormCountrol" value="1" style="text-align: center;" id="result1" />
+                </div>
+            </td>
+            <td class="text-align itemunitprice">
+                $20
+            </td>
+            <td class="text-align itemsubtotal">
+                $20
+            </td>
+            <td class="text-align">
+                <img src="trash-fill.svg" class="trashIcon" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-item">
+                    <a class="product-thumb" href="#"><img src="000002.png" alt="Product"></a>
+                    <div class="product-info">
+                        <h4 class="product-title"><a href="#">	
+                            Cole Haan Crossbody</a></h4><span>Size: -</span><span>Color: Turquoise</span>
+                    </div>
+                </div>
+            </td>
+            <td class="text-align">
+                <div class="count-input">
+                    <input type="text" class="FormCountrol" value="1" style="text-align: center;" />
+                </div>
+            </td>
+            <td class="text-align itemunitprice">
+                $20
+            </td>
+            <td class="text-align itemsubtotal">
+                $20
+            </td>
+            <td class="text-align">
+                <img src="trash-fill.svg" class="trashIcon" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-item">
+                    <a class="product-thumb" href="#"><img src="000001.png" alt="Product"></a>
+                    <div class="product-info">
+                        <h4 class="product-title"><a href="#">	
+                            Daily Fabric Cap</a></h4><span>Size: XL</span><span>Color: Black</span>
+                    </div>
+                </div>
+            </td>
+            <td class="text-align">
+                <div class="count-input">
+                    <input type="text" class="FormCountrol" value="2" style="text-align: center;" />
+                </div>
+            </td>
+            <td class="text-align itemunitprice">
+                $30
+            </td>
+            <td class="text-align itemsubtotal">
+                $60
+            </td>
+            <td class="text-align">
+                <img src="trash-fill.svg" class="trashIcon" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div class="shopping-cart-footer">
+    <div class="column">
+        <div style="margin-left: 20px;">
+        <input type="text" id="txtdiscount" class="FormCountrol" style="display: inline-block;width: 250px;" />
+        <input type="button" class="btn ButtonSubmit" id="ApplyCoupon" value="Apply Coupon" style="display: inline-block;" />
+    </div>
+    </div>
+    <div class="column" id="ca">
+        <div id="SubTotals">
+        <div class="totals">
+        <span>Subtotal: </span>
+        <span id="subtotal">$100</span>
+    </div>
+   
+</div>
+    <div class="totals">
+        <h4>
+        <span>Amount: </span>
+        <span id="total">$90</span>
+    </h4>
+    </div>
+    </div>
+
+</div>
+</div>
+    </body>
+</html>
